@@ -1,0 +1,554 @@
+\documentclass[10pt,a4]{article}
+    \usepackage[margin=1.3in]{geometry}
+    \usepackage[UKenglish]{isodate}
+    % can add citecolor = color below 
+    \usepackage[colorlinks=true, linkcolor=red, citecolor=black, filecolor=magenta, urlcolor=blue]{hyperref}
+    \usepackage[T1]{fontenc}
+    \usepackage{enumitem}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{subfigure}
+    \usepackage{graphicx}
+    \usepackage{combelow}
+    \usepackage{cite}
+    \usepackage[hyphenbreaks]{breakurl}
+    
+    \usepackage{cleveref}
+    \crefformat{section}{\S#2#1#3} % see manual of cleveref, section 8.2.1
+    \crefformat{subsection}{\S#2#1#3}
+    \crefformat{subsubsection}{\S#2#1#3}
+    
+    % Custom colors
+    \usepackage{color}
+    \definecolor{deepblue}{rgb}{0,0,0.5}
+    \definecolor{deepred}{rgb}{0.6,0,0}
+    \definecolor{deepgreen}{rgb}{0,0.5,0}
+    \definecolor{deeppurple}{rgb}{0.30,0.0,0.15}
+    
+    \usepackage{hyperref}
+    \hypersetup{
+         colorlinks   = true,
+         citecolor    = deepblue,
+         linkcolor=deeppurple
+    }
+    
+    \usepackage[ruled,commentsnumbered,lined]{algorithm2e} % code
+    \DontPrintSemicolon
+    
+    \usepackage{tabu}  % thicker lines in tables
+    \usepackage{float}
+    \usepackage{bm}
+    \usepackage{caption}
+    \usepackage{listings}
+    
+    \cleanlookdateon
+    
+
+    \graphicspath{{../keras-gcn/kegra/vis/}}
+
+    \begin{document}
+    \bibliographystyle{plain}
+    
+    \thispagestyle{empty}
+    
+    \newcommand{\HRulee}{\rule{\linewidth}{0.5mm}}
+    
+    \vfil
+    
+    {\raggedleft \large Razvan Kusztos \\}
+    {\raggedleft \large Girton College \\}
+    {\raggedleft \large \tt rek43@cam.ac.uk \\}
+    
+    \vspace{50pt}
+    
+    \begin{center}
+    
+        {\Large \sc Computer Science Tripos, Part III \\}
+        \vspace{10pt}
+        {\Large \sc L42: Machine Learning and Algorithms for Data Mining\\}
+        \vspace{20pt}
+        \HRulee \\[0.1cm]
+        \vspace{10pt}
+        {\LARGE \bf Title}
+        \HRulee \\[20pt]
+        {\LARGE  Report\\}
+        \vspace{20pt}
+        {\Large \today \\}
+        \vspace{40pt}
+    \end{center}
+    
+    \vfill
+    
+    \begin{flushright}
+    %TODO: add wordcount
+    Word count: nana
+    \end{flushright}
+        
+    \newpage
+    
+    \section{Introduction}
+    
+    Recent years have pushed the scientific community towards collecting increasing 
+    amounts of data. It is the case of social networks, biological omes (such as 
+    the genome, proteome, connectome), ontologies or traffic networks. 
+    In the majority of cases, these data are being explored by standard, 
+    supervised machine learning techniques. These only manage to capture the 
+    data points in isolation. New algorithms have been developed in order to 
+    integrate spatial information (e.g. the graph structure).
+    
+    Often, graph-based datasets consist of a small subset of manually 
+    tagged nodes. The goal is to extrapolate and infer the tags for the rest of 
+    the nodes. 
+    Unlabeled data being more numerous, efficient algorithms require a number of 
+    simplifying assumptions. These include 
+    the  \textbf{continuity assumption}, saying that close nodes are more likely 
+    to share  a label  and the \textbf{manifold assumption}, saying that the data 
+    points lie on a much lower dimensional manifold. \cite{chapelle2009semi} 
+    
+    \subsection{Problem Description}
+
+    A way of categorising the learning algorithms in this scenario is 
+    whether they are \textbf{transductive} or \textbf{inductive}. Transductive 
+    learning refers to learning solely about information in the training set. On 
+    the other hand, inductive learning solves the more general problem of 
+    extrapolating to new, unseen points. This current work 
+    focuses on the former. The problem can be stated as follows: 
+    We are given a graph $(V, E)$ where $V$ is a set of vertices, $E$ is a set of 
+    edges. In general, the structure of $E$ is presented in the form of $W$, 
+    a weight matrix (in the current paper, this will only contain
+    $0$ and $1$ values -- the adjacency matrix, notated $A$). Moreover, each of 
+    the vertices(nodes) is represented by a set of features $X$. Lastly, we consider 
+    a partition of the nodes, consisting of the unlabeled nodes $V_U$ and the 
+    labeled nodes $V_L$. Given all these data, we need to find an algorithm that 
+    infers the labels for the set $V_U$.
+    
+    \subsection{Previous Work}
+
+    Incorporating the information given by of $W$ in order improve the inference 
+    accuracy has driven recent research. 
+    
+    A main class of solutions makes direct use of the \textbf{continuity assumption}, 
+    by choosing to minimise a loss term directly related to the graph structure. 
+    This usually takes the form of a graph Laplacian regularisation term.(Zhu et al.,
+    2003 \cite{zhu2003semi}; Zhou et al., 2004 \cite{zhou2004learning}; 
+    Belkin et al., 2006 \cite{belkin2006manifold}; Weston et al., 2012 
+    \cite{weston2012deep}). These methods closely resemble the \emph{label propagation} 
+    algorithm \cite{zhu2002learning}, or the \emph{MAD} \cite{talukdar2009new} algorithm w
+    where the graph structure is the main driver of the inference algorithm.
+    
+    On the other hand, we find methods that focus on the \textbf{manifold assumption}. 
+    These aim to find an embedding of the features which reflects edge information. 
+    An early example of embedding through a probabilistic generative model can be 
+    found in \cite{nowicki2001estimation}. However, the recent interest in developing new
+    embedding methods was probably brought by the effectiveness of word embeddings 
+    in natural language processing tasks \cite{mikolov2013distributed}. Some methods include
+    \emph{DeepWalk} \cite{perozzi2014deepwalk}, which forces node embeddings to be close to 
+    representations of random walks containing them, \emph{node2vec} \cite{grover2016node2vec}, 
+    which presents a trade-off between breath first search and depth\-first search, 
+    or \emph{Planetoid} \cite{yang2016revisiting} which combines the regularisation 
+    and embedding approaches.
+    
+    Lastly, the class of algorithms which will be primarily presented for the 
+    rest of this paper are the algorithms based on neural networks, specifically 
+    on extensions of \textbf{convolutional neural networks}. These methods mainly use 
+    spectral graph signal processing techniques such as discussed by \emph{Deferrard et al.} 
+    \cite{defferrard2016convolutional}, \emph{GCN} \cite{kipf2016semi} or the 
+    general approach present in \emph{MoNet} \cite{monti2017geometric}. More recently, 
+    \emph{Graph Attentional Networks} \cite{velivckovic2017graph} leverage new
+    research in \emph{self-attention}. 
+    In all these works, the graph information is encoded not as part of a loss 
+    function or some preprocessing step, but in the neural network itself.  
+    
+    \subsection{Next steps}
+
+    In the remainder of this work, I will present in some detail the seminal 
+    paper introducing \emph{GCN} \cite{kipf2016semi}. I will perform experiments
+    that could shed some light on the importance of each of the three main 
+    components of such a machine learning algorithm: the features of the nodes,
+    the graph structure and the training labels. 
+    
+    I will lastly suggest and evaluate some potential changes in their pipeline, 
+    and discuss possible interpretations.
+    
+    \section{Implementation} \label{impl}
+    
+    \subsection{Graph Convolutional Networks \cite{kipf2016semi}} 
+
+    Kipf and Welling \cite{kipf2016semi} have recently introduced a simple, 
+    yet effective way of approximating graph convolutions in neural layers. 
+    They limit the convolution operation to the \emph{first order neighbourhood}, 
+    justified by the need to reduce overfitting. Moreover, they introduce a 
+    \emph{renormalisation trick}, avoiding vanishing gradient issues. 
+    Altogether, they provide a well behaved and fast to train layer that improves 
+    over existing methods by a significant margin.
+
+    Their proposed layer has the form:
+    \begin{align}
+        \label{eqn:layer}
+        H^{(l+1)} = \sigma \big( 
+            \tilde{D}^{-\frac{1}{2}} 
+            \tilde{A} 
+            \tilde{D}^{-\frac{1}{2}} 
+            H^{(l)}W^{(l)}
+            \big)
+    \end{align}
+
+    The term $\tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}} $ turns out 
+    to be the normalized Laplacian matrix \cite{hammond2011wavelets} of the graph 
+    with added self-loops. This is what the authors refer to as the 
+    \emph{renormalisation trick}. In the above, $\tilde{A} = A + I_n$ and 
+    $\tilde{D}_{ii} = \sum_j\tilde{A}_{ij}$.
+
+    The paper explains how this model can be derived from the standard graph convolution, 
+    by limiting to a local pooling approach. This is put in 
+    contrast with the work of \emph{Hammond et al.}\cite{hammond2011wavelets}, where 
+    the convolution operation is decomposed into a sum of \emph{Chebyshev polynomials}.
+    The current model is assumed to provide more expressivity (achieved via 
+    stacking multiple layers) without being limited by a set parametrisation. 
+
+    One particular thing to note is that, although the improvement is not huge 
+    compared to competing methods such as \emph{Planetoid}\cite{yang2016revisiting} 
+    or \emph{ICA}\cite{bhagat2011node}, it improves by a significant margin over 
+    methods that do not take into account any of the graph structure. 
+
+    However, there are a couple of particularities that the authors suggest as 
+    difficulties for this instance of problems. Firstly, their appendix shows how 
+    deeply stacking the graph convolutional layer decreases the inference capacities 
+    of the model. 
+    Secondly, they repeatedly reference overfitting and regularisation as this 
+    class of problems is known to suffer from a very small training set. In the 
+    case at hand, the training set represents a mere $5\%$ of the whole dataset. 
+    As we will see, the performance of their algorithm is dependent on 
+    regularisation and \emph{dropout} \cite{srivastava2014dropout} parameters.
+
+    \subsection{Technical details}
+
+    The implementation used throughout the experiments uses Keras \cite{chollet2015} 
+    and is based on the authors' implementation \footnote{https://github.com/tkipf/keras-gcn}.
+
+    I have used the same setup as the original paper \cite{kipf2016semi}, with 
+    the exception that I changed the activation function (referred to as $\sigma$
+    in equation \ref{eqn:layer}) to be the linear activation function. This yielded
+    better results in my experiments.
+    
+    \begin{align}
+        \hat{A} &= \tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}} \\
+        \label{eqn:kipfmodel}
+        f(X, A) &= softmax\Big(\hat{A}\big(\hat{A}XW^{(0)}\big)W^{(1)}\Big)
+    \end{align}
+
+    In order to perform semi-supervised label classification, the categorical
+    cross\-entropy loss is calculated, where $Y_L$ are the labels of $V_L$:
+
+    \begin{align*}
+        \mathcal{L} &= - \sum_{l\in Y_L}\sum_{f=1}^F Y_{lf}ln(f(X,A)_{lf})
+    \end{align*}
+
+    Finally, the weights $W^{(0)}$ and $W^{(1)}$ are being trained using the Adam
+    optimiser \cite{kingma2014adam}. 
+
+    \subsection{Alternative Models}
+
+    An aim of this mini-paper is to analyse how the different inputs of the 
+    problem come together to maximise inference power.
+    
+    \begin{itemize} 
+    \item As a \emph{baseline}, I will use a simple neural network. This entails 
+    replacing the graph convolutional layers with dense layers.
+    \begin{align*}
+        f(X) &= softmax \big(XW^{(0)}W^{(1)} \big)
+    \end{align*}
+    As the formula above doesn't encode any information about the graph structure at 
+    all, it could be used to put a lower bound on the inference power of the features alone.
+
+    This reduces the problem to the classical supervised learning approach. In general, 
+    in fact, it isn't the case that the including the notion of graph structure 
+    necessarily increases the predictive capacities. Consider, for example, a graph 
+    structure that is trivially derived from the features.
+
+    \item Next, I will assess a system that combines the training labels
+    and the graph structure alone. For achieving this, I suggest two potential ways. 
+    Starting from the \emph{GCN} model, we can replace the input in equation 
+    \ref{eqn:kipfmodel} with either the known labels or random data. 
+    I expect the convolution operator of Kipf and Welling to achieve results close 
+    to techniques such as majority voting or label propagation.
+    
+    \item Since the graph information has not been derived from the feature information 
+    (for example by using k-nearest neighbours), intuitively combining them should
+    contain more information than each in individuality. This is addressed by 
+    \emph{GCN}. 
+    
+    \item An interesting result is that using \emph{dimensionality reduction} by 
+    a significant factor doesn't decrease the accuracy of the \emph{GCN}. This is an 
+    important step towards reducing the memory requirement of training the model.
+    
+    \end{itemize}
+    \section{Evaluation}
+    
+    \subsection{Dataset} 
+
+    For the purpose of validating the suggested models, I will be using the Cora 
+    dataset, with the same split that was used in Kipf's paper \cite{kipf2016semi}.
+    
+    The Cora dataset consists of scientific papers, each represented using a boolean 
+    vector indicating the presence of a vocabulary word in the paper. The graph 
+    structure arises from the citation network. For the purpose of these experiments, 
+    the structure is symmetrised, so it corresponds to an undirected graph. Lastly, labels
+    correspond to scientific fields the papers belong to.
+    
+    \begin{table}
+        \centering
+        \caption{Cora dataset statistics}
+        \label{tab:datastat}
+        \begin{tabular}{c c c c c}
+            
+            \textbf{Dataset} & \textbf{Nodes} & \textbf{Edges} & \textbf{Classes} & \textbf{Features} \\
+            \hline
+            Cora    & 2,708 & 5,429 & 7       & 1,433    \\ 
+        \end{tabular}
+    \end{table}
+    
+    The training-validation-test split for performing semi-supervised classification 
+    task uses the procedure present in Kipf's original implementation 
+    \footnote{https://github.com/tkipf/gcn}. 
+
+    \begin{table}[!h]
+        \centering
+        \caption{Training-test-validation split}
+        \label{tab:traintest}
+        \begin{tabular}{c c c c}
+            
+            \textbf{Total Nodes} & \textbf{Training} & \textbf{Validation} & \textbf{Test} \\
+            \hline
+            2,708 & 140 & 500 & 1,000    \\ 
+        \end{tabular}
+    \end{table}
+    
+    \subsection{Set-Up}
+
+    I will largely use the same experimental setup as in \cite{kipf2016semi}. I am 
+    using the same dataset splits as described in \ref{tab:traintest}. As the 
+    system is dependent on regularisation techniques, I will be using 
+    \emph{dropout} for all layers, as well as \emph{L2 regularisation} for 
+    all trainable weights. 
+
+    For minimising the loss, I use the Adam \cite{kingma2014adam} optimiser, with 
+    a learning rate set to \emph{0.01}. As opposed to Kipf's work, I do not use 
+    \emph{early stopping}. 
+
+    The values reported are the ones maximised using \emph{cross-validation}.
+
+    The whole training data is presented to the model in a single batch, and the 
+    training is done for 200 epochs. 
+
+    \subsection{Baseline}
+    \label{sec:baseline}
+
+    In the following, I illustrate the results obtained by a vanilla neural network,
+    consisting of three dense layers, the first two with \emph{linear} activations and 
+    the last one with a \emph{softmax} activation. I perform a series of 
+    preprocessing procedures: 
+    1) unpreprocessed, 2) PCA, 3) neighbour averaging at a distance of one and two 
+    edges.
+
+    As formulae, the neighbourhood averages are computed as: 
+    \begin{align*}
+        X_{n.avg.1} &= AX  \\
+        X_{n.avg.2} &= \alpha A X + (1-\alpha) A^2 X
+    \end{align*}
+    
+    \begin{table}[h!]
+        \centering
+        \label{tab:baseline}
+        \begin{tabular}{l c c}
+            \textbf{Preprocessing} & \textbf{Validation Accuracy} & \textbf{Testing Accuracy} \\
+            \hline
+            unpreprocessed  & 55.2 & 54.6 \\
+            PCA             & 52.8 & 53.9 \\
+            neighbourhood avg. & 60.6 & 62.6 \\
+            neighb. avg. 2  & 76.2 & \textbf{76.9} \\
+            neighb. avg. 2 + PCA & 75.8 & \textbf{74.4} 
+        \end{tabular}
+        \caption{Accuracy results of methods that illustrate importance of the graph structure}
+    \end{table}
+
+    This analysis shows that simply incorporating information from a close 
+    neighbourhood can boost the algorithm's effectiveness by a significant margin.
+    In the above, $\alpha=0.55$ and the \emph{PCA} reduces the number of features 
+    to 50.
+
+    \subsection{Forgetting the features}
+    \label{sec:labels}
+    In this section, I completely ignore the features and use the \emph{GCN}
+    used in the Kipf's paper \cite{kipf2016semi}. In order to discard the features, 
+    I replace the matrix $X$ in two different ways: 
+        \begin{itemize}
+            \item using as input the labels of the training nodes. To match the 
+        batch size, I use:
+            \begin{align*}
+                y_v = 
+                \begin{cases}
+                    label(v), & \text{if } v \in V_{training} \\ 
+                    0         & \text{otherwise} 
+                \end{cases}
+            \end{align*}
+            \item feeding in a randomly generated feature matrix with the same 
+        shape as X. In order to avoid overfitting, I will run the experiment 
+        multiple times and present the average. 
+        
+        \end{itemize}
+        
+    \begin{table}
+        \centering
+        \begin{tabular}{l c c}
+            \textbf{Model} & \textbf{Validation Accuracy} & \textbf{Test Accuracy} \\
+            \hline 
+            Random Features \footnote{Bernoulli p=0.2, averaged over 10 trials} & 52.4 & 54.8 \\
+            Labels as Features & 53.8 & 54.3  
+        \end{tabular}
+        \caption{Accuracy results of models that further prove the information 
+        content of the graph structure}
+    \end{table}
+
+    These results show that the training labels, together with the adjacency structure 
+    alone are capable of discriminating the classes. In fact, this accuracy matches
+    the one obtained by using the features alone.
+
+    This provides an intuitive understanding of why the GCN is so effective 
+    at solving the problem at hand. It combines the label information extracted 
+    from features through the mechanism of the neural network presented 
+    in section \ref{sec:baseline}, together with the label information 
+    extrapolated from the training labels along the graph structure, as in 
+    section \ref{sec:labels}.
+
+    \subsection{GCN experiments and alterations}
+
+    A first modification that improves the accuracy of the system is simply 
+    replacing the nonlinearity described in \emph{Kipf et al.}\cite{kipf2016semi}
+    with a \emph{linear} activation function.
+
+    \begin{table}
+        \centering
+        \label{tab:activ}
+        \begin{tabular}{l c c}
+            \textbf{Activation} & \textbf{Validation Accuracy} & \textbf{Test Accuracy} \\
+            ReLu\footnote{As in the original paper} & 79.8 & 82.2 \\
+            Tanh  & 80.4 & 82.7 \\
+            SeLu &  79.6 &  81.4  \\
+            Linear & \textbf{80.6} &  \textbf{83.2}
+        \end{tabular}
+        \caption{Comparing different activation functions}
+    \end{table}
+
+    In order to partially address the memory requirement issue, the features 
+    can be preprocessed using a \emph{dimensionality reduction} technique. To 
+    assess this I will use a variety of PCA procedures.
+
+    \begin{figure}
+        \centering
+        \mbox{
+            \subfigure{
+                \includegraphics[width=0.5\textwidth]{../keras-gcn/kegra/vis/pcaComponents.png}
+            }\quad
+            \subfigure{
+                \includegraphics[width=0.5\textwidth]{../keras-gcn/kegra/vis/kpcaComponents.png}
+                }
+        }
+        \caption{Graphs showing the evolution of accuracy over the number of PCA 
+        components used. Left is textbook PCA, Right is Kernel PCA with RBF kernel.}
+        \label{fig:pca}
+    \end{figure}
+    We can see from Figure \ref{fig:pca} that, by keeping 50 principal components, the accuracy
+    of the GCN is not decreased. This is equivalent to a 30-fold decrease in 
+    the number of features. 
+
+    This exercise in dimensionality reduction inspires a more intuitive approach 
+    to data exploration. In the following, we can use t-SNE \cite{van2008visualizing}
+    to explore the structure of the learned distribution.
+
+    \begin{figure}[h!]
+        \centering
+        \mbox{
+            \subfigure{
+                \includegraphics[width=0.5\textwidth]{label1vis.png}
+            }
+            \subfigure{
+                \includegraphics[width=0.5\textwidth]{label2vis.png}
+            }
+        }
+        \mbox{
+            \subfigure{
+                \includegraphics[width=0.5\textwidth]{label3vis.png}
+            }
+            \subfigure{
+                \includegraphics[width=0.5\textwidth]{label5vis.png}
+            }
+        }
+        \caption{Displaying the prediction for a subset of labels, as well as the 
+        validation set corresponding to that label. From left to right, we have 
+        labels 1, 2, 3 and 5}
+        \label{fig:dimred}
+    \end{figure}
+    From Figure \ref{fig:dimred}, we can draw a few conclusions about the algorithm
+    and the data at hand. 
+    
+    Firstly, we can observe that the data present a cluster structure (in the grey 
+    data points). Although with tSNE it is easy to fall prey to pareidolia 
+    \footnote{https://distill.pub/2016/misread-tsne/}, the cluster structure 
+    hypothesis is confirmed by both the experiments in Section \ref{sec:baseline}, 
+    as well as in the shape of the model prediction for individual labels.
+    
+    Secondly, by exploring the validation data points, we can see that most of 
+    the false negatives are due to points that are far from their clusters. This 
+    is most likely because the algorithm does not learn all it can from the 
+    graph structure. A reasonable explanation for this lies in the local pooling 
+    approximation \cite{kipf2016semi}, combined with the noise in the data. 
+    
+    \subsection{Discussions}
+
+    This suggests that the layers should indeed be stacked to reach a higher order 
+    neighbourhood. However, this is shown  by \emph{Kipf et al.}\cite{kipf2016semi} 
+    to be ineffective. The observations above inspired many failed attempts 
+    to better integrate the known label data, all of which obtain accuracies 
+    marginally lower than the \emph{GCN}:
+    \begin{itemize}
+        \item Pretraining the network on label data, as in \ref{sec:labels}.
+        \item Using as training labels the output of a majority voting algorithm.
+        \item Training two parallel \emph{GCNs}, concatenating their outputs and 
+        feeding that to a third \emph{GCNs}. The two inputs would be features 
+        and training nodes. This provides a way to leverage a trade-off between 
+        features and label information
+    \end{itemize}
+
+    However, the apparent limit in accuracy for this classification task (which doesn't
+    go above 83\% from what I am aware of) can be justified by the sparsity of 
+    training data. In fact, this could be partly because of the way the training 
+    set is constructed. Designed to match a random uniform distribution in the whole 
+    data set, the degrees of the nodes inherit the power law distribution. This leads 
+    to a majority of low degree nodes which have low entropy. However, in practice, 
+    this is not necessarily the case, and high degree notes might be more common.
+    For example, human curators are more likely to classify popular  publications, 
+    creating an informative training dataset. 
+
+    \section{Conclusions}
+
+    This mini-project has attempted to reconstruct the results of the \emph{GCNs}
+    seminal paper \cite{kipf2016semi} and explore the reasons for its effectiveness.
+
+    I have discussed how the problem can be approached from different angles, as well as 
+    illustrated lower bounds on the inference power gained from 
+    combining the different elements. I analysed the benefits of using 
+    dimensionality reduction techniques. Lastly, I considered some shortcomings of 
+    the approach, as well as fundamental limits inherent in the problem statement.
+
+    
+
+    
+    
+
+
+
+
+    \newpage
+    \bibliography{references}
+    \end{document}

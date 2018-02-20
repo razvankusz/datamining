@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: report.aux
+The style file: plain.bst
+Database file #1: references.bib
+Warning--can't use both volume and number fields in monti2017geometric
+Warning--empty journal in zhu2002learning
+You've used 22 entries,
+            2118 wiz_defined-function locations,
+            629 strings with 8144 characters,
+and the built_in function-call counts, 8790 in all, are:
+= -- 881
+> -- 415
+< -- 11
++ -- 162
+- -- 140
+* -- 590
+:= -- 1384
+add.period$ -- 71
+call.type$ -- 22
+change.case$ -- 136
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 353
+empty$ -- 675
+format.name$ -- 140
+if$ -- 1900
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 21
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 159
+preamble$ -- 1
+purify$ -- 114
+quote$ -- 0
+skip$ -- 277
+stack$ -- 0
+substring$ -- 565
+swap$ -- 119
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 88
+warning$ -- 2
+while$ -- 83
+width$ -- 24
+write$ -- 243
+(There were 2 warnings)

@@ -1,0 +1,119 @@
+\documentclass[10pt,a4]{article}
+    \usepackage[margin=1.3in]{geometry}
+    \usepackage[UKenglish]{isodate}
+    % can add citecolor = color below 
+    \usepackage[colorlinks=true, linkcolor=red, citecolor=black, filecolor=magenta, urlcolor=blue]{hyperref}
+    \usepackage[T1]{fontenc}
+    \usepackage{enumitem}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{subfigure}
+    \usepackage{graphicx}
+    \usepackage{combelow}
+    \usepackage{cite}
+    \usepackage[hyphenbreaks]{breakurl}
+    
+    \usepackage{cleveref}
+    \crefformat{section}{\S#2#1#3} % see manual of cleveref, section 8.2.1
+    \crefformat{subsection}{\S#2#1#3}
+    \crefformat{subsubsection}{\S#2#1#3}
+    
+    % Custom colors
+    \usepackage{color}
+    \definecolor{deepblue}{rgb}{0,0,0.5}
+    \definecolor{deepred}{rgb}{0.6,0,0}
+    \definecolor{deepgreen}{rgb}{0,0.5,0}
+    \definecolor{deeppurple}{rgb}{0.30,0.0,0.15}
+    
+    \usepackage{hyperref}
+    \hypersetup{
+         colorlinks   = true,
+         citecolor    = deepblue,
+         linkcolor=deeppurple
+    }
+    
+    \usepackage[ruled,commentsnumbered,lined]{algorithm2e} % code
+    \DontPrintSemicolon
+    
+    \usepackage{tabu}  % thicker lines in tables
+    \usepackage{float}
+    \usepackage{bm}
+    \usepackage{caption}
+    \usepackage{listings}
+    
+    \cleanlookdateon
+    
+
+    \graphicspath{{../keras-gcn/kegra/vis/}}
+
+    \begin{document}
+    \bibliographystyle{plain}
+    
+    \thispagestyle{empty}
+    
+    \newcommand{\HRulee}{\rule{\linewidth}{0.5mm}}
+    
+    \vfil
+    
+    {\raggedleft \large Razvan Kusztos \\}
+    {\raggedleft \large Girton College \\}
+    {\raggedleft \large \tt rek43@cam.ac.uk \\}
+    
+    \vspace{50pt}
+    
+    \begin{center}
+    
+        {\Large \sc Computer Science Tripos, Part III \\}
+        \vspace{10pt}
+        {\Large \sc L42: Machine Learning and Algorithms for Data Mining\\}
+        \vspace{20pt}
+        \HRulee \\[0.1cm]
+        \vspace{10pt}
+        {\LARGE \bf Title}
+        \HRulee \\[20pt]
+        {\LARGE  Report\\}
+        \vspace{20pt}
+        {\Large \today \\}
+        \vspace{40pt}
+    \end{center}
+    
+    \vfill
+    
+    \begin{flushright}
+    %TODO: add wordcount
+    Word count: nana
+    \end{flushright}
+        
+    \newpage
+    
+    \section{Introduction}
+    
+    Recent years have pushed the scientific community towards collecting increasing 
+    amounts of data. It is the case of social networks, biological omes (such as 
+    the genome, proteome, connectome), ontologies or traffic networks. 
+    In the majority of cases, these data are being explored by standard, 
+    supervised machine learning techniques. These only manage to capture the 
+    data points in isolation. New algorithms have been developed in order to 
+    integrate spatial information (e.g. the graph structure).
+    
+    Often, graph-based data sets consist of a small subset of manually 
+    tagged nodes. The goal is to extrapolate and infer the tags for the rest of 
+    the nodes. 
+    Unlabeled data being more numerous, efficient algorithms require a number of 
+    simplifying assumptions. These include 
+    the  \textbf{continuity assumption}, saying that close nodes are more likely 
+    to share  a label  and the \textbf{manifold assumption}, saying that the data 
+    points lie on a much lower dimensional manifold. \cite{chapelle2009semi} 
+    
+    \subsection{Problem Description}
+
+    A way of categorising the learning algorithms in this scenario is 
+    whether they are \textbf{transductive} or \textbf{inductive}. Transductive 
+    learning refers to learning solely about information in the training set. On 
+    the other hand, inductive learning solves the more general problem of 
+    extrapolating to new, unseen points. This current work 
+    focuses on the former. The problem can be stated as follows: 
+    We are given a graph $(V, E)$ where $V$ is a set of vertices, $E$ is a set of 
+    edges. In general, the structure of $E$ is presented in the form of $W$, 
+    a weight matrix (in the current paper, this will only contain
+    $0$ and $1$ values -- the adja
