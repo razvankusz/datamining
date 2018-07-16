@@ -1,0 +1,50 @@
+\begin{thebibliography}{1}
+
+\bibitem{abbe2015community}
+Emmanuel Abbe and Colin Sandon.
+\newblock Community detection in general stochastic block models: Fundamental
+  limits and efficient algorithms for recovery.
+\newblock In {\em Foundations of Computer Science (FOCS), 2015 IEEE 56th Annual
+  Symposium on}, pages 670--688. IEEE, 2015.
+
+\bibitem{kumar2016edge}
+Srijan Kumar, Francesca Spezzano, VS~Subrahmanian, and Christos Faloutsos.
+\newblock Edge weight prediction in weighted signed networks.
+\newblock In {\em Data Mining (ICDM), 2016 IEEE 16th International Conference
+  on}, pages 221--230. IEEE, 2016.
+
+\bibitem{lei2015consistency}
+Jing Lei, Alessandro Rinaldo, et~al.
+\newblock Consistency of spectral clustering in stochastic block models.
+\newblock {\em The Annals of Statistics}, 43(1):215--237, 2015.
+
+\bibitem{leskovec2010signed}
+Jure Leskovec, Daniel Huttenlocher, and Jon Kleinberg.
+\newblock Signed networks in social media.
+\newblock In {\em Proceedings of the SIGCHI conference on human factors in
+  computing systems}, pages 1361--1370. ACM, 2010.
+
+\bibitem{snapnets}
+Jure Leskovec and Andrej Krevl.
+\newblock {SNAP Datasets}: {Stanford} large network dataset collection.
+\newblock \url{http://snap.stanford.edu/data}, June 2014.
+
+\bibitem{mercado2016clustering}
+Pedro Mercado, Francesco Tudisco, and Matthias Hein.
+\newblock Clustering signed networks with the geometric mean of laplacians.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  4421--4429, 2016.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
+
+\bibitem{rohe2011spectral}
+Karl Rohe, Sourav Chatterjee, Bin Yu, et~al.
+\newblock Spectral clustering and the high-dimensional stochastic blockmodel.
+\newblock {\em The Annals of Statistics}, 39(4):1878--1915, 2011.
+
+\end{thebibliography}

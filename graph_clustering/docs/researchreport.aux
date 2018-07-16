@@ -1,0 +1,87 @@
+\relax 
+\citation{mercado2016clustering}
+\citation{mercado2016clustering}
+\citation{rohe2011spectral}
+\citation{mercado2016clustering}
+\citation{mercado2016clustering}
+\citation{snapnets}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\citation{leskovec2010signed}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Description}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Theoretical background}{2}}
+\newlabel{spectralclustering}{{2.1}{2}}
+\citation{}
+\citation{mercado2016clustering}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}New matrices used for signed graphs}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Geometric means of Laplacians}{3}}
+\citation{lei2015consistency}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{4}}
+\newlabel{methods}{{3}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Spectral clustering implementation}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Computing the matrices}{4}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{figure:1}{{\caption@xref {figure:1}{ on input line 174}}{5}}
+\@writefile{lol}{\contentsline {lstlisting}{../clustering\textendash baseline.py}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  Spectral Clustering. In line 9, the numpy operation return normalized vectors. Since in most of my experiments, the calculations did not yield symmetric matrices, no optimisation could have been performed for computing the eigenvalues. A possible extension would be performing the highly parallelisabe operations on the GPU. Lines 11-13 select the k eigenvectors corresponding to the smallest eigenvalues. Lastly, the KMeans clustering algorithm is performed (15-17), by using the implementation provided in the scikit-learn package. \relax }}{5}}
+\newlabel{figure:lgm}{{\caption@xref {figure:lgm}{ on input line 202}}{5}}
+\@writefile{lol}{\contentsline {lstlisting}{../matrix\textendash operations.py}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Computation of the LGM\relax }}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Stochastic Block Matrices}{5}}
+\citation{mercado2016clustering}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation}{6}}
+\newlabel{evaluation}{{4}{6}}
+\citation{mercado2016clustering}
+\citation{scikit-learn}
+\newlabel{figure:2}{{\caption@xref {figure:2}{ on input line 239}}{7}}
+\@writefile{lol}{\contentsline {lstlisting}{../sbm.py}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  SBM Graph Generation. The correct labels are returned as a convenience for the rest of the implementation. \relax }}{7}}
+\citation{mercado2016clustering}
+\citation{mercado2016clustering}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Clustering metric}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Evaluation of the SBM}{8}}
+\newlabel{ev:sbm}{{4.2}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Conditions used in SBM analysis \cite  {mercado2016clustering}\relax }}{8}}
+\newlabel{tab:ineq}{{1}{8}}
+\citation{abbe2015community}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces . The clustering score decreases as the number of clusters increases\relax }}{9}}
+\newlabel{fig:increasingk}{{4}{9}}
+\newlabel{tab:params}{{\caption@xref {tab:params}{ on input line 344}}{9}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces ARI score for clustering random graphs instantiated with the SBM model\relax }}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Runtime evaluation}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces . Runtime of LGM clustering\relax }}{10}}
+\newlabel{fig:increasingn}{{5}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Evaluation of standard datasets}{10}}
+\newlabel{ev:std}{{4.4}{10}}
+\citation{kumar2016edge}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces  Values of $k^+$ and $k^-$ vs. LGM accuracy. \relax }}{11}}
+\newlabel{fig:iriskheatmap}{{6}{11}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Iris}}}{11}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Wine}}}{11}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces ARI for Datasets in scikit-learn toy examples (wine, iris, digits, and breast cancer) as well as URI(ecoli)\relax }}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}SNAP datasets}{11}}
+\citation{kumar2016edge}
+\citation{kumar2016edge}
+\citation{kumar2016edge}
+\citation{kumar2016edge}
+\citation{mercado2016clustering}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Ratio of highest score during the grid search operation\relax }}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces  Clustering on the Bitcoin-Alpha-Dataset \cite  {kumar2016edge}.\relax }}{12}}
+\newlabel{fig:bitcoinalphamap}{{7}{12}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {$W^+$}}}{12}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {$W^-$}}}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces  Clustering on the Bitcoin-OTC-Dataset \cite  {kumar2016edge}.\relax }}{13}}
+\newlabel{fig:bitcoinotcmap}{{8}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {$W^+$}}}{13}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {$W^-$}}}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{13}}
+\citation{kumar2016edge}
+\bibdata{mybib.bib}
+\bibcite{abbe2015community}{1}
+\bibcite{kumar2016edge}{2}
+\bibcite{lei2015consistency}{3}
+\bibcite{leskovec2010signed}{4}
+\bibcite{snapnets}{5}
+\bibcite{mercado2016clustering}{6}
+\bibcite{scikit-learn}{7}
+\bibcite{rohe2011spectral}{8}
+\bibstyle{plain}

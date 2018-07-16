@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex report"] 1519088202 "report.aux" "report.bbl" "report" 1519089049
+["bibtex report"] 1519263038 "report.aux" "report.bbl" "report" 1519263812
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "references.bib" 1519056101 6285 8b2ec87629f176c528ed2ee9947125db ""
-  "report.aux" 1519089049 6996 f0f43e17f41880c938cefd6059932176 ""
+  "report.aux" 1519263811 7006 1d81ab4de575ec2a67598c628379b2fc ""
   "report.bcf" 0 -1 0 ""
   (generated)
-  "report.bbl"
   "report.blg"
-["pdflatex"] 1519089043 "/usr/home-space/Space/datamining/GraphNet/docs/report.tex" "report.pdf" "report" 1519089049
+  "report.bbl"
+["pdflatex"] 1519263806 "/usr/home-space/Space/datamining/GraphNet/docs/report.tex" "report.pdf" "report" 1519263812
   "../keras-gcn/kegra/vis/kpcaComponents.png" 1518994480 127364 7c615c6a3308902b03aacc558910e6ea ""
   "../keras-gcn/kegra/vis/label1vis.png" 1519057427 1576733 0243a19c49fee99db06d51ce13728144 ""
   "../keras-gcn/kegra/vis/label2vis.png" 1519057448 1647735 848add08ec4523ed2d2c53f3cdb9520f ""
@@ -15,7 +15,7 @@
   "../keras-gcn/kegra/vis/label5vis.png" 1519057405 1602595 7d8dd7dff50505e25ba663a826672093 ""
   "../keras-gcn/kegra/vis/pcaComponents.png" 1518993157 127182 78112dcca64e1f9591360135f77dd0f8 ""
   "/etc/texmf/web2c/texmf.cnf" 1486664911 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/usr/home-space/Space/datamining/GraphNet/docs/report.tex" 1519089043 24984 065b0d63f0b15dc54c119755841e44d5 ""
+  "/usr/home-space/Space/datamining/GraphNet/docs/report.tex" 1519263806 25294 9b413b0f8761829edaba54af37398fd0 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -161,12 +161,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1505735411 1863403 f3ff9a4253bcb5fb9a9baaf0c572cb01 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1505735424 3860203 ad639a48320b5e32eba751f53ecffe3d ""
-  "report.aux" 1519089049 6996 f0f43e17f41880c938cefd6059932176 ""
-  "report.bbl" 1519088202 5300 2869bf607a3dec1c208c330a80d006d2 "bibtex report"
-  "report.out" 1519089049 986 93553ef470d550fbf5f616026cd8fa0b ""
-  "report.tex" 1519089043 24984 065b0d63f0b15dc54c119755841e44d5 ""
+  "report.aux" 1519263811 7006 1d81ab4de575ec2a67598c628379b2fc ""
+  "report.bbl" 1519263038 5300 2869bf607a3dec1c208c330a80d006d2 "bibtex report"
+  "report.out" 1519263811 986 93553ef470d550fbf5f616026cd8fa0b ""
+  "report.tex" 1519263806 25294 9b413b0f8761829edaba54af37398fd0 ""
   (generated)
+  "report.out"
   "report.pdf"
   "report.log"
-  "report.out"
   "report.aux"

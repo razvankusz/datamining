@@ -1,0 +1,664 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.18)  29 NOV 2017 11:54
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/usr/home-space/Space/GraphClust/docs/researchreport.tex
+(/usr/home-space/Space/GraphClust/docs/researchreport.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks15
+\verbatim@line=\toks16
+\verbatim@in@stream=\read1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count88
+\lst@gtempboxa=\box26
+\lst@token=\toks17
+\lst@length=\count89
+\lst@currlwidth=\dimen105
+\lst@column=\count90
+\lst@pos=\count91
+\lst@lostspace=\dimen106
+\lst@width=\dimen107
+\lst@newlines=\count92
+\lst@lineno=\count93
+\lst@maxwidth=\dimen108
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count94
+\lst@skipnumbers=\count95
+\lst@framebox=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen109
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen110
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count96
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count97
+\leftroot@=\count98
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count99
+\DOTSCASE@=\count100
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
+\dotsspace@=\muskip11
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
+\tag@help=\toks19
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
+\andhelp@=\toks20
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks21
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count108
+\float@exts=\toks23
+\float@box=\box30
+\@float@everytoks=\toks24
+\@floatcapt=\box31
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks25
+\c@algorithm=\count109
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+)
+\c@ContinuedFloat=\count110
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+\c@KVtest=\count111
+\sf@farskip=\skip46
+\sf@captopadj=\dimen125
+\sf@capskip=\skip47
+\sf@nearskip=\skip48
+\c@subfigure=\count112
+\c@subfigure@save=\count113
+\c@lofdepth=\count114
+\c@subtable=\count115
+\c@subtable@save=\count116
+\c@lotdepth=\count117
+\sf@top=\skip49
+\sf@bottom=\skip50
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count118
+\c@ALG@rem=\count119
+\c@ALG@nested=\count120
+\ALG@tlm=\skip51
+\ALG@thistlm=\skip52
+\c@ALG@Lnr=\count121
+\c@ALG@blocknr=\count122
+\c@ALG@storecount=\count123
+\c@ALG@tmpcounter=\count124
+\ALG@tmplength=\skip53
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(./researchreport.aux)
+\openout1 = `researchreport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count125
+\scratchdimen=\dimen126
+\scratchbox=\box32
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen127
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks27
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count131
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--70
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+/usr/home-space/Space/GraphClust/docs/researchreport.tex:103: Undefined control
+ sequence.
+l.103     \item  $\Lambda \in \mathbb
+                                     {R}^{n}, V \in \mathbb{R}^{n \times n} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/home-space/Space/GraphClust/docs/researchreport.tex:103: Undefined control
+ sequence.
+l.103 ...\Lambda \in \mathbb{R}^{n}, V \in \mathbb
+                                                  {R}^{n \times n} \leftarrow$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/home-space/Space/GraphClust/docs/researchreport.tex:107: Undefined control
+ sequence.
+l.107 ...corresponding eigenvectors $U \in \mathbb
+                                                  {R}^(n \times k})$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/home-space/Space/GraphClust/docs/researchreport.tex:107: Extra }, or forgo
+tten $.
+l.107 ...genvectors $U \in \mathbb{R}^(n \times k}
+                                                  )$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[2] [3]
+
+Package caption Warning: \label without proper reference on input line 174.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `figure:1' on page 4 undefined on input line 171.
+
+(../clustering-baseline.py
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
+) (../matrix-operations.py)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package caption Warning: \label without proper reference on input line 174.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `figure:1' on page 4 undefined on input line 207.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--223
+
+ []
+
+[4]
+Overfull \vbox (15.27165pt too high) has occurred while \output is active []
+
+
+[5] (../sbm.py)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package caption Warning: \label without proper reference on input line 239.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `figure:2' on page 6 undefined on input line 257.
+
+[6]
+Missing character: There is no ‚ in font cmti10!
+Missing character: There is no Ä in font cmti10!
+Missing character: There is no ú in font cmti10!
+Missing character: There is no ‚ in font cmti10!
+Missing character: There is no Ä in font cmti10!
+Missing character: There is no ù in font cmti10!
+ [7]
+Overfull \hbox (30.4298pt too wide) in paragraph at lines 300--312
+[][] 
+ []
+
+Package epstopdf Info: Source file: <exp1.eps>
+(epstopdf)                    date: 2017-11-27 16:05:48
+(epstopdf)                    size: 30066 bytes
+(epstopdf)             Output file: <exp1-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-27 16:06:31
+(epstopdf)                    size: 20883 bytes
+(epstopdf)             Command: <repstopdf --outfile=exp1-eps-converted-to.pdf 
+exp1.eps>
+(epstopdf)             \includegraphics on input line 332.
+Package epstopdf Info: Output file is already uptodate.
+<exp1-eps-converted-to.pdf, id=40, 578.16pt x 433.62pt>
+File: exp1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use exp1-eps-converted-to.pdf>
+Package pdftex.def Info: exp1-eps-converted-to.pdf used on input line 332.
+(pdftex.def)             Requested size: 180.0pt x 134.99644pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8]
+Package epstopdf Info: Source file: <time1.eps>
+(epstopdf)                    date: 2017-11-28 02:03:03
+(epstopdf)                    size: 23410 bytes
+(epstopdf)             Output file: <time1-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-28 02:04:56
+(epstopdf)                    size: 17224 bytes
+(epstopdf)             Command: <repstopdf --outfile=time1-eps-converted-to.pdf
+ time1.eps>
+(epstopdf)             \includegraphics on input line 375.
+Package epstopdf Info: Output file is already uptodate.
+ <time1-eps-converted-to.pdf, id=47, 462.72874pt x 346.29375pt>
+File: time1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use time1-eps-converted-to.pdf>
+Package pdftex.def Info: time1-eps-converted-to.pdf used on input line 375.
+(pdftex.def)             Requested size: 180.0pt x 134.70526pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <./exp1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <iris-lgm-colmap.eps>
+(epstopdf)                    date: 2017-11-28 00:27:17
+(epstopdf)                    size: 884665 bytes
+(epstopdf)             Output file: <iris-lgm-colmap-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-28 00:27:26
+(epstopdf)                    size: 13571 bytes
+(epstopdf)             Command: <repstopdf --outfile=iris-lgm-colmap-eps-conver
+ted-to.pdf iris-lgm-colmap.eps>
+(epstopdf)             \includegraphics on input line 403.
+Package epstopdf Info: Output file is already uptodate.
+
+<iris-lgm-colmap-eps-converted-to.pdf, id=93, 462.72874pt x 346.29375pt>
+File: iris-lgm-colmap-eps-converted-to.pdf Graphic file (type pdf)
+
+<use iris-lgm-colmap-eps-converted-to.pdf>
+Package pdftex.def Info: iris-lgm-colmap-eps-converted-to.pdf used on input lin
+e 403.
+(pdftex.def)             Requested size: 180.0pt x 134.70526pt.
+Package epstopdf Info: Source file: <wine-lgm-colmap.eps>
+(epstopdf)                    date: 2017-11-28 00:28:29
+(epstopdf)                    size: 884997 bytes
+(epstopdf)             Output file: <wine-lgm-colmap-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-28 00:28:53
+(epstopdf)                    size: 13745 bytes
+(epstopdf)             Command: <repstopdf --outfile=wine-lgm-colmap-eps-conver
+ted-to.pdf wine-lgm-colmap.eps>
+(epstopdf)             \includegraphics on input line 405.
+Package epstopdf Info: Output file is already uptodate.
+
+<wine-lgm-colmap-eps-converted-to.pdf, id=94, 462.72874pt x 346.29375pt>
+File: wine-lgm-colmap-eps-converted-to.pdf Graphic file (type pdf)
+
+<use wine-lgm-colmap-eps-converted-to.pdf>
+Package pdftex.def Info: wine-lgm-colmap-eps-converted-to.pdf used on input lin
+e 405.
+(pdftex.def)             Requested size: 180.0pt x 134.70526pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <./time1-eps-converted-to.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11 <./iris-lgm-colmap-eps-converted-to.pdf> <./wine-lgm-colmap-eps-converted-t
+o.pdf>]
+Package epstopdf Info: Source file: <bitcoin-alpha-plus.eps>
+(epstopdf)                    date: 2017-11-28 03:16:21
+(epstopdf)                    size: 839548 bytes
+(epstopdf)             Output file: <bitcoin-alpha-plus-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-28 03:16:32
+(epstopdf)                    size: 14957 bytes
+(epstopdf)             Command: <repstopdf --outfile=bitcoin-alpha-plus-eps-con
+verted-to.pdf bitcoin-alpha-plus.eps>
+(epstopdf)             \includegraphics on input line 493.
+Package epstopdf Info: Output file is already uptodate.
+
+<bitcoin-alpha-plus-eps-converted-to.pdf, id=171, 462.72874pt x 346.29375pt>
+File: bitcoin-alpha-plus-eps-converted-to.pdf Graphic file (type pdf)
+
+<use bitcoin-alpha-plus-eps-converted-to.pdf>
+Package pdftex.def Info: bitcoin-alpha-plus-eps-converted-to.pdf used on input 
+line 493.
+(pdftex.def)             Requested size: 180.0pt x 134.70526pt.
+Package epstopdf Info: Source file: <bitcoin-alpha-minus.eps>
+(epstopdf)                    date: 2017-11-28 03:16:21
+(epstopdf)                    size: 839545 bytes
+(epstopdf)             Output file: <bitcoin-alpha-minus-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-28 03:16:33
+(epstopdf)                    size: 10578 bytes
+(epstopdf)             Command: <repstopdf --outfile=bitcoin-alpha-minus-eps-co
+nverted-to.pdf bitcoin-alpha-minus.eps>
+(epstopdf)             \includegraphics on input line 495.
+Package epstopdf Info: Output file is already uptodate.
+
+<bitcoin-alpha-minus-eps-converted-to.pdf, id=172, 462.72874pt x 346.29375pt>
+File: bitcoin-alpha-minus-eps-converted-to.pdf Graphic file (type pdf)
+
+<use bitcoin-alpha-minus-eps-converted-to.pdf>
+Package pdftex.def Info: bitcoin-alpha-minus-eps-converted-to.pdf used on input
+ line 495.
+(pdftex.def)             Requested size: 180.0pt x 134.70526pt.
+Package epstopdf Info: Source file: <bitcoin-otc-plus.eps>
+(epstopdf)                    date: 2017-11-28 03:14:07
+(epstopdf)                    size: 838498 bytes
+(epstopdf)             Output file: <bitcoin-otc-plus-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-28 03:14:10
+(epstopdf)                    size: 11943 bytes
+(epstopdf)             Command: <repstopdf --outfile=bitcoin-otc-plus-eps-conve
+rted-to.pdf bitcoin-otc-plus.eps>
+(epstopdf)             \includegraphics on input line 501.
+Package epstopdf Info: Output file is already uptodate.
+
+<bitcoin-otc-plus-eps-converted-to.pdf, id=173, 462.72874pt x 346.29375pt>
+File: bitcoin-otc-plus-eps-converted-to.pdf Graphic file (type pdf)
+
+<use bitcoin-otc-plus-eps-converted-to.pdf>
+Package pdftex.def Info: bitcoin-otc-plus-eps-converted-to.pdf used on input li
+ne 501.
+(pdftex.def)             Requested size: 180.0pt x 134.70526pt.
+Package epstopdf Info: Source file: <bitcoin-otc-minus.eps>
+(epstopdf)                    date: 2017-11-28 03:14:07
+(epstopdf)                    size: 838495 bytes
+(epstopdf)             Output file: <bitcoin-otc-minus-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-28 03:14:10
+(epstopdf)                    size: 9855 bytes
+(epstopdf)             Command: <repstopdf --outfile=bitcoin-otc-minus-eps-conv
+erted-to.pdf bitcoin-otc-minus.eps>
+(epstopdf)             \includegraphics on input line 503.
+Package epstopdf Info: Output file is already uptodate.
+
+<bitcoin-otc-minus-eps-converted-to.pdf, id=174, 462.72874pt x 346.29375pt>
+File: bitcoin-otc-minus-eps-converted-to.pdf Graphic file (type pdf)
+
+<use bitcoin-otc-minus-eps-converted-to.pdf>
+Package pdftex.def Info: bitcoin-otc-minus-eps-converted-to.pdf used on input l
+ine 503.
+(pdftex.def)             Requested size: 180.0pt x 134.70526pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--537
+
+ []
+
+[12 <./bitcoin-alpha-plus-eps-converted-to.pdf> <./bitcoin-alpha-minus-eps-conv
+erted-to.pdf>] [13 <./bitcoin-otc-plus-eps-converted-to.pdf> <./bitcoin-otc-min
+us-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 538--542
+
+ []
+
+(./researchreport.bbl) [14] (./researchreport.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6073 strings out of 493029
+ 88666 string characters out of 6136234
+ 286093 words of memory out of 5000000
+ 9507 multiletter control sequences out of 15000+600000
+ 12101 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 44i,13n,49p,699b,1246s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmtt9.pfb>
+Output written on researchreport.pdf (14 pages, 351785 bytes).
+PDF statistics:
+ 299 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+
